@@ -1,0 +1,44 @@
+* {
+ margin:  0 ;
+ padding:  0 ;
+ box-sizing: border-box;
+}
+body {
+  background-color: rgb(109, 78, 172) ; 
+}
+.menu  {
+  width:60px ;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+.hamburguer {
+  position: relative;
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  top:29px ;
+  left:15px; 
+}
+.hamburguer:before , 
+.hamburguer:after {
+  background: #000;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.hamburguer:before  {
+  top:-10px;
+}
+.hamburguer:after {
+  bottom:-10px;
+}
+input {
+  display: none;
+}
