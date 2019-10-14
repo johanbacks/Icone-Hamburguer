@@ -14,6 +14,12 @@ body {
   position: fixed;
   bottom: 25px;
   right: 25px;
+  cursor:pointer; 
+  transition: box-shadow 1s ease-in-out;
+  box-shadow: 0 0 0 0px #fff, 0 0 0 0px #fff ;
+}
+.menu:hover {
+  box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff ;
 }
 .hamburguer {
   position: relative;
@@ -23,6 +29,7 @@ body {
   height: 2px;
   top:29px ;
   left:15px; 
+  transition: .5s ease-in-out ;
 }
 .hamburguer:before , 
 .hamburguer:after {
@@ -32,6 +39,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+  transition: .5s ease-in-out ;
 }
 .hamburguer:before  {
   top:-10px;
@@ -39,6 +47,21 @@ body {
 .hamburguer:after {
   bottom:-10px;
 }
+input:checked ~ label .menu {
+  box-shadow: 0 0 0 130vw #fff, 0 0 0 100vw #fff ;
+  transition: .5s ease-in-out ;
+}
 input {
   display: none;
+}
+input:checked ~ label .hamburguer {
+ transform: rotate(45deg);
+}
+input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0 ; 
+}
+input:checked ~ label .hamburguer::after {
+  transform: rotate(90deg);
+  bottom: 0 ; 
 }
